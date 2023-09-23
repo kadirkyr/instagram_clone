@@ -11,7 +11,14 @@ class MyInstagramApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(useMaterial3: true, appBarTheme: const AppBarTheme(centerTitle: false)),
+      theme: ThemeData.light().copyWith(
+          scaffoldBackgroundColor: Colors.white,
+          useMaterial3: true,
+          appBarTheme: const AppBarTheme(centerTitle: false),
+          textTheme: const TextTheme(
+              headlineSmall: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              titleLarge: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              labelLarge: TextStyle(color: Colors.black, fontWeight: FontWeight.bold))),
       home: const HomeView(),
     );
   }
